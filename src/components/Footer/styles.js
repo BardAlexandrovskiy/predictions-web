@@ -18,6 +18,7 @@ export const Link = styled(NavLink)`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s, opacity 0.2s;
 
   @media (max-width: 736px) {
     font-size: 17px;
