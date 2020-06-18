@@ -8,7 +8,9 @@ import HatScreen from '../screens/HatScreen';
 const Router = () => {
   return (
     <HashRouter>
-      <Redirect to="/crystalBall" />
+      <Route to="/">
+        <Redirect to="/crystalBall" />
+      </Route>
       <Route path="/crystalBall" component={crystalBallScreen} />
       <Route path="/prediction" component={PredictionScreen} />
       <Route path="/hat" component={HatScreen} />
