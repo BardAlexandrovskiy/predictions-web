@@ -12,7 +12,9 @@ const GlobalStyle = createGlobalStyle`
     word-wrap: break-word;
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-weight: lighter;
   }
+
   html, body, #root {
     height: 100%;
   }

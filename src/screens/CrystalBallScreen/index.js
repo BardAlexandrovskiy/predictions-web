@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import {
   Container,
   ScoreboardAnswers,
@@ -7,6 +8,8 @@ import {
   MagicBall,
   ReloadButton,
 } from './styles';
+import Alert from '../../components/Alert';
+import { hideMagicBallDescriptionAlert } from '../../actions/magicBallAction';
 import getRandomInt from '../../constants/getRandomIntFunction';
 import magicBallAnswersArr from '../../constants/magicBallAnswersArr';
 
@@ -20,6 +23,11 @@ class CrystalBallScreen extends React.Component {
       translateY: 0,
     };
   }
+
+  componentDidUpdate = () => {
+    const { isDescriptionAlert } = this.props;
+    localStorage.setItem('magicBall', JSON.stringify({ isDescriptionAlert }));
+  };
 
   getAnswer = () => {
     this.setState({ disabledButton: true });
@@ -68,8 +76,18 @@ class CrystalBallScreen extends React.Component {
 
   render() {
     const { answer, textOpacity, disabledButton, translateY } = this.state;
+    const {
+      isDescriptionAlert,
+      hideMagicBallDescriptionAlertAction,
+    } = this.props;
     return (
       <Container>
+        {isDescriptionAlert && (
+          <Alert
+            text="Ляляляля, тополя и магический шар! ЧУДЕСА!"
+            handleClick={hideMagicBallDescriptionAlertAction}
+          />
+        )}
         <ReloadButton onClick={this.reloadPage} disabled={disabledButton}>
           Перезагрузка
         </ReloadButton>
@@ -86,4 +104,13 @@ class CrystalBallScreen extends React.Component {
   }
 }
 
-export default CrystalBallScreen;
+const mapStateToProps = (state) => {
+  const { isDescriptionAlert } = state.magicBall;
+  return { isDescriptionAlert };
+};
+
+const mapDispatchToProps = {
+  hideMagicBallDescriptionAlertAction: hideMagicBallDescriptionAlert,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CrystalBallScreen);
