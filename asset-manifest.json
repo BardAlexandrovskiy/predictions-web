@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/predictions-web/static/js/main.cddaa762.chunk.js",
-    "main.js.map": "/predictions-web/static/js/main.cddaa762.chunk.js.map",
+    "main.js": "/predictions-web/static/js/main.5f55553c.chunk.js",
+    "main.js.map": "/predictions-web/static/js/main.5f55553c.chunk.js.map",
     "runtime-main.js": "/predictions-web/static/js/runtime-main.3ee5f424.js",
     "runtime-main.js.map": "/predictions-web/static/js/runtime-main.3ee5f424.js.map",
     "static/js/2.4f4e9e6a.chunk.js": "/predictions-web/static/js/2.4f4e9e6a.chunk.js",
     "static/js/2.4f4e9e6a.chunk.js.map": "/predictions-web/static/js/2.4f4e9e6a.chunk.js.map",
     "index.html": "/predictions-web/index.html",
-    "precache-manifest.bade7ee8f4b75411f7a3d7ad7a4699fb.js": "/predictions-web/precache-manifest.bade7ee8f4b75411f7a3d7ad7a4699fb.js",
+    "precache-manifest.27669bddf5445a33156d140dd3fb56d3.js": "/predictions-web/precache-manifest.27669bddf5445a33156d140dd3fb56d3.js",
     "service-worker.js": "/predictions-web/service-worker.js",
     "static/js/2.4f4e9e6a.chunk.js.LICENSE.txt": "/predictions-web/static/js/2.4f4e9e6a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3ee5f424.js",
     "static/js/2.4f4e9e6a.chunk.js",
-    "static/js/main.cddaa762.chunk.js"
+    "static/js/main.5f55553c.chunk.js"
   ]
 }
